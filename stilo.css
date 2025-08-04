@@ -1,0 +1,252 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: sans-serif;
+    background-color: #fdf9e2; /* Color crema del logo como fondo */
+    color: #333333; /* Color gris oscuro para el texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: #333333; /* Color gris oscuro del fondo del logo */
+    color: #fdf9e2; /* Color crema para el texto del encabezado */
+    padding: 20px;
+    border-bottom: 5px solid #9e9e9e; /* Borde con el color de la sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.titulo {
+    font-family: 'Pacifico', cursive; /* Fuente similar a la del logo */
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px #9e9e9e; /* Sombra de texto similar a la del logo */
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.ofertas,
+.seccion-bienvenida,
+.seccion-sabores,
+.seccion-contacto {
+    background-color: #ffffff;
+    border: 1px solid #9e9e9e; /* Borde suave */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listaofertas {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.listaofertas li:last-child {
+    border-bottom: none;
+}
+
+.listaofertas li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #9e9e9e;
+}
+
+.subtitulo {
+    color: #333333;
+    font-size: 2rem;
+    border-bottom: 2px solid #9e9e9e;
+    padding-bottom: 10px;
+}
+
+.lista-sabores {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.lista-sabores li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #9e9e9e;
+}
+
+.lista-sabores li:last-child {
+    border-bottom: none;
+}
+
+.contacto-info {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.contacto-info span {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #333333;
+    color: #fdf9e2;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* --- Estilos para el Carrusel --- */
+.seccion-carrusel {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carrusel-container {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #9e9e9e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carrusel-slide {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fdf9e2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(51, 51, 51, 0.5); /* Color gris oscuro semi-transparente */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #9e9e9e; /* Color de la sombra */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #333333; /* Gris oscuro para el punto activo */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* --- Estilos para los Botones Desplegables --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dropbtn {
+    background-color: #333333; /* Gris oscuro */
+    color: #fdf9e2; /* Crema */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #9e9e9e; /* Sombra */
+}
+
+.dropdown-content {
+    display: none;
+    position: relative; /* Cambiado a relative para que siga el flujo del documento */
+    background-color: #ffffff;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #fdf9e2; /* Crema */
+}
+
+.show {
+    display: block;
+}
